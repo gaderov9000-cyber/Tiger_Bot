@@ -49,7 +49,7 @@ async def on_button(update: Update, context: ContextTypes.DEFAULT_TYPE):
     elif q.data == "support":
         context.user_data["step"] = "support"
       
-await q.message.reply_text("الباسورد: " + str(u.get('username')) + " الايدي: " + str(u.get('password')))
+
 async def on_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     step = context.user_data.get("step")
     text = update.message.text.strip()
