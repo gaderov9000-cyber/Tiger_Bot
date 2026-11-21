@@ -49,7 +49,7 @@ async def on_button(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await q.message.reply_text("ما عندك حساب بعد، اكبس انشاء حساب", reply_markup=main_menu())
     elif q.data == "support":
         context.user_data["step"] = "support"
-        await q.message.reply_text("اكتب مشكلتك، ورح توصل للادمن:")
+     await q.message.reply_text(f"الايدي: {u.get('username')}\nالباسورد: {u.get('password')}")   
 
 async def on_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     step = context.user_data.get("step")
